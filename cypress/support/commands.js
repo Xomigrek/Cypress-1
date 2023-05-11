@@ -34,8 +34,8 @@ Cypress.Commands.add('login', (login, password) => {
     }
     cy.contains('Submit').click();
   });
-    
-  Cypress.Commands.add('addBook', (title, description, authors) => {
+
+  Cypress.Commands.add('completion', (title, description, authors) => {
     cy.contains('.btn-warning', 'Add new').click();
     if (title) {
         cy.get('#title').type(title);
@@ -46,10 +46,15 @@ Cypress.Commands.add('login', (login, password) => {
       if (authors){
         cy.get('#authors').type(authors);
       }
+    });
+    
+  Cypress.Commands.add('addBook', (title, description, authors) => {
+    cy.completion(title, description, authors);
+    cy.contains('Submit').click();
   });
   
   Cypress.Commands.add('addFavoriteBook', (title, description, authors) => {
-    cy.addBook(title, description, authors);
+    cy.completion(title, description, authors);
     cy.get('#favorite').click().click();
     cy.contains('Submit').click();
   });
