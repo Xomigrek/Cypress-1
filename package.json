@@ -4,20 +4,23 @@
   },
   "name": "cypress-1",
   "version": "1.0.0",
-  "main": "cypress.config.js",
+  "main": "login.cy.js",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "iphone_headed": "npx cypress run --browser --headed chrome --config-file cypress.config.js",
+    "web_headed": "npx cypress run --browser --headed edge --config-file cypress2.config.js",
+    "iphone_headless": "npx cypress run --browser chrome --config-file cypress.config.js",
+    "web_headless": "npx cypress run --browser edge --config-file cypress2.config.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Xomigrek/Cypress-1.git"
   },
-  "author": "",
+  "author": "IGOR KHOMENKO",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Xomigrek/Cypress-1/issues"
   },
   "homepage": "https://github.com/Xomigrek/Cypress-1#readme",
-  "description": ""
+  "description": "tests with Cypress"
 }
