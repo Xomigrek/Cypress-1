@@ -7,8 +7,8 @@
   "main": "login.cy.js",
   "devDependencies": {},
   "scripts": {
-    "iphone_headed": "npx cypress run --browser --headed chrome --config-file cypress.config.js",
-    "web_headed": "npx cypress run --browser --headed edge --config-file cypress2.config.js",
+    "iphone_headed": "npx cypress run --browser chrome --headed --config-file cypress.config.js",
+    "web_headed": "npx cypress run --browser edge --headed --config-file cypress2.config.js",
     "iphone_headless": "npx cypress run --browser chrome --config-file cypress.config.js",
     "web_headless": "npx cypress run --browser edge --config-file cypress2.config.js"
   },
